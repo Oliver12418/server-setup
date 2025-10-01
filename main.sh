@@ -12,6 +12,6 @@ nvm use node
 node -v
 npm -v
 
-bash -c "sed -i 's/^#*HandleLidSwitch=.*$/HandleLidSwitch=ignore/' /etc/systemd/logind.conf"
-bash -c "sed -i 's/^#*HandleLidSwitchDocked=.*$/HandleLidSwitchDocked=ignore/' /etc/systemd/logind.conf"
+sudo bash -c "sed -i 's/^#*HandleLidSwitch=.*$/HandleLidSwitch=ignore/' /etc/systemd/logind.conf"
+sudo bash -c "sed -i 's/^#*HandleLidSwitchDocked=.*$/HandleLidSwitchDocked=ignore/' /etc/systemd/logind.conf"
 sudo systemctl restart systemd-logind
