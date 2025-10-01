@@ -11,3 +11,7 @@ nvm install node
 nvm use node
 node -v
 npm -v
+
+bash -c "sed -i 's/^#*HandleLidSwitch=.*$/HandleLidSwitch=ignore/' /etc/systemd/logind.conf"
+bash -c "sed -i 's/^#*HandleLidSwitchDocked=.*$/HandleLidSwitchDocked=ignore/' /etc/systemd/logind.conf"
+systemctl restart systemd-login
